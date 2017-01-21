@@ -21,15 +21,15 @@ public class SpawnObstacle : MonoBehaviour {
 	}
 
 	public void MakeObstacles(){
-		for (int i = 0; i < obstacleSprites.Length; i++) {
-			GameObject obstacleSprite = obstacleSprites [i];
+
+		GameObject obstacleSprite = obstacleSprites [Random.Range(0, 3)];
 			string obstacleName = obstacleSprite.name;
 
 			//GameObject newObstacle = Instantiate(obstacleSprites[i],  new Vector3(-686, 0, 0), transform.rotation);
 
-			obstacleSprites[i]=Instantiate(obstacleSprites[i],new Vector3(Random.Range(minY,maxY),Random.Range(minX,maxX), 0),transform.rotation) as GameObject; 
+			obstacleSprite = Instantiate(obstacleSprite,new Vector3(Random.Range(minY,maxY),Random.Range(minX,maxX), 0),transform.rotation) as GameObject; 
 
-		}
+
 	}
 
 	//	bool hasCollisions(GameObject target)
