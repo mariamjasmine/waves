@@ -9,7 +9,8 @@ public class WaveControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		waveHeight = GetComponent<Transform> ().position.y;
+		print (waveHeight);
 	}
 	
 	// Update is called once per frame
@@ -19,31 +20,35 @@ public class WaveControl : MonoBehaviour {
 
 	public void commandUP(){
 		upCount += 1;
-		//waveHeight = waveHeight + (waveHeight * .03);
+		waveHeight = waveHeight + (waveHeight * -.03f);
+		transform.position = new Vector2(0, waveHeight);
+		print (waveHeight);
 	}
 
 	public void commandDown(){
 		downCount += 1;
+		waveHeight = waveHeight - (waveHeight * .03f);
+		transform.position = new Vector2(0, waveHeight);
 	}
 
 	public void checkCounts(){
-		if(upCount >= 3){
+		if(upCount >= 15){
 			RaiseWave ();
 		}
-		if (downCount >= 3) {
+		if (downCount >= 15) {
 			LowerWave ();
 		}
 
 	}
 
 	public void RaiseWave(){
-		waveHeight += 5;
+		//waveHeight += 5;
 		print (waveHeight);
 
 	}
 
 	public void LowerWave(){
-		waveHeight -= 5;
+		//waveHeight -= 5;
 		print (waveHeight);
 	}
 }
