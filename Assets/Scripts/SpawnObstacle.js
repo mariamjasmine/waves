@@ -5,7 +5,7 @@
 //var obstacleSprite = "";
 //var obstacleName = "";
 =======
-var sprite1,sprite2,sprite3,sprite4,thisSprite;
+//var sprite1,sprite2,sprite3,sprite4,thisSprite;
 =======
 /*var sprite1,sprite2,sprite3,sprite4,thisSprite;
 >>>>>>> Stashed changes
