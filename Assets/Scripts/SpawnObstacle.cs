@@ -8,20 +8,36 @@ public class SpawnObstacle : MonoBehaviour {
 	public GameObject[] obstacleSprites;
 	public float minY, maxY, minX, maxX;
 
+	public GameObject wave;
+	public Vector2 waveCoordinates;
+	public Vector2 waveDimensions;
+
 	void Start ()
 	{
 		
 		MakeObstacles ();
+		waveCoordinates = wave.GetComponent<Transform>().position;
+		//print (waveCoordinates);
+		waveDimensions = wave.GetComponent<Renderer>().bounds.size;
+		//print (waveDimensions);
 	}
 
 	void Update ()
 	{
 
 
+	
 	}
 
 	public void MakeObstacles(){
+		minX = waveCoordinates[0];
+		minY = waveCoordinates[1];
+		maxX = waveCoordinates[0] + waveDimensions[0];
+		maxY = waveCoordinates[1] + waveDimensions[1];
+		print (maxX);
+		print (maxY);
 
+		//minY = wavesY, maxY = wavesY + height, minX = wavesX, maxX = wavesX + width
 		GameObject obstacleSprite = obstacleSprites [Random.Range(0, 3)];
 			string obstacleName = obstacleSprite.name;
 
