@@ -13,14 +13,13 @@ public class GetWebcam : MonoBehaviour {
 		//set up camera
 		WebCamDevice[] devices = WebCamTexture.devices;
 		string backCamName="";
-		/*for( int i = 0 ; i < devices.Length ; i++ ) {
+		for( int i = 0 ; i < devices.Length ; i++ ) {
 			Debug.Log("Device:"+devices[i].name+ "IS FRONT FACING:"+devices[i].isFrontFacing);
 
 			if (!devices[i].isFrontFacing) {
 				backCamName = devices[i].name;
 			}
-		}*/
-		backCamName = devices[1].name;
+		}
 
 		CameraTexture = new WebCamTexture(backCamName,500, 500,30);
 		CameraTexture.Play();
