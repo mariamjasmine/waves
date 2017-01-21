@@ -10,11 +10,7 @@ public class SpawnObstacle : MonoBehaviour {
 
 	void Start ()
 	{
-		bounds = new Bounds[obstacleSprites.Length];
-		for (int i = 0; i < bounds.Length; i++)
-		{
-			bounds[i] = obstacleSprites[i].GetComponent<BoxCollider2D>().bounds;
-		}
+		
 		MakeObstacles ();
 	}
 
@@ -29,7 +25,7 @@ public class SpawnObstacle : MonoBehaviour {
 			GameObject obstacleSprite = obstacleSprites [i];
 			string obstacleName = obstacleSprite.name;
 
-			GameObject newObstacle = Instantiate(obstacleSprites[i],  new Vector3(-686, 0, 0), transform.rotation);
+			//GameObject newObstacle = Instantiate(obstacleSprites[i],  new Vector3(-686, 0, 0), transform.rotation);
 
 			obstacleSprites[i]=Instantiate(obstacleSprites[i],new Vector3(Random.Range(minY,maxY),Random.Range(minX,maxX), 0),transform.rotation) as GameObject; 
 
