@@ -1,10 +1,14 @@
 //not sure how obstacleSprite(s) gets introduced (stuff with objects?); 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 //var obstacleSprites = [];
 //var obstacleSprite = "";
 //var obstacleName = "";
 =======
 var sprite1,sprite2,sprite3,sprite4,thisSprite;
+=======
+/*var sprite1,sprite2,sprite3,sprite4,thisSprite;
+>>>>>>> Stashed changes
 var maxX = 10;
 var maxY = 10;
 var minX = 5;
@@ -33,7 +37,7 @@ var endPosition;
 function makeObstacle() {	
 	thisSprite = obstacleSprites[Math.floor(Math.random() * 4)];
  	obstacleName = thisSprite.name;
-	obstacleSprite = Instantiate(thisSprite, new Vector3(Math.floor(Math.random() * (maxY - minY + 1)) + minY), Math.floor(Math.random() * (maxX - minX + 1)) + minX),0,transform.rotation);
+	obstacleSprite = Instantiate(thisSprite, new Vector3(Math.floor(Math.random() * (maxY - minY + 1)) + minY), Math.floor(Math.random() * (maxX - minX + 1)) + minX,0,transform.rotation);
 }
 
 setInterval(function(){
