@@ -418,12 +418,18 @@ MonoBehaviour:
   - {fileID: 1476471838481544, guid: 93a7907c4c3084aefbe833be1dc701d7, type: 2}
   - {fileID: 1476471838481544, guid: 93a7907c4c3084aefbe833be1dc701d7, type: 2}
   minY: 0
-  maxY: 7
+  maxY: -2.1
   minX: 0
+<<<<<<< HEAD
   maxX: 7
   wave: {fileID: 151819451}
   waveCoordinates: {x: 0, y: 0}
   waveDimensions: {x: 0, y: 0}
+=======
+  maxX: 19
+  wave: {fileID: 151819451}
+  waveCoordinates: {x: 0, y: 0}
+>>>>>>> origin/master
 --- !u!4 &728529926
 Transform:
   m_ObjectHideFlags: 0
