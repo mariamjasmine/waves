@@ -238,8 +238,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 151819451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -0, y: -2.38, z: 0}
   m_LocalScale: {x: 1.0546378, y: 1.1011877, z: 1}
+=======
+  m_LocalPosition: {x: -0.05, y: -2.71, z: 0}
+  m_LocalScale: {x: 1.2873853, y: 1.0825198, z: 1}
+>>>>>>> parent of 5c7c473... change
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -423,6 +428,7 @@ MonoBehaviour:
 <<<<<<< HEAD
   maxX: 7
 <<<<<<< HEAD
+<<<<<<< HEAD
   wave: {fileID: 151819451}
   waveCoordinates: {x: 0, y: 0}
   waveDimensions: {x: 0, y: 0}
@@ -431,6 +437,8 @@ MonoBehaviour:
   wave: {fileID: 151819451}
   waveCoordinates: {x: 0, y: 0}
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 5c7c473... change
 =======
 >>>>>>> parent of 5c7c473... change
 --- !u!4 &728529926
