@@ -255,8 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3573a71f201546719723d73585001c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSound: {fileID: 0}
-  downSound: {fileID: 0}
+  upSound: {fileID: 1058139391}
+  downSound: {fileID: 947038701}
 --- !u!1 &297386800
 GameObject:
   m_ObjectHideFlags: 0
