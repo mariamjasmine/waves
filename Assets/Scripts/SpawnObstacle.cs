@@ -47,10 +47,10 @@ public class SpawnObstacle : MonoBehaviour {
 			print (currentObstacle);
 			
 			currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
-			waveHeight -= (waveHeight * 0.5f);	
+			waveHeight -= (waveHeight * 0.2f);	
 			print (waveHeight);
 			upSound.Play();
-			transform.position = new Vector2(0, waveHeight);
+			wave.transform.position = new Vector2(0, waveHeight);
 	}
 
 	public void increaseCount(){

@@ -21,7 +21,7 @@ public class GetWebcam : MonoBehaviour {
 			}
 		}
 
-		CameraTexture = new WebCamTexture(backCamName,500, 500,30);
+		CameraTexture = new WebCamTexture(backCamName,10000, 10000,30);
 		CameraTexture.Play();
 		BackgroundTexture.texture = CameraTexture;
 
