@@ -228,7 +228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 865d12699a21e403cb8d50ff6961b296, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.547}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &151819453
@@ -412,8 +412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58a71efe45fd4c9e8090d09413a7f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 0}
-  bounds: []
   obstacleSprites:
   - {fileID: 1493182079526882, guid: f748f086b168d420d8655d7f4a02b736, type: 2}
   - {fileID: 1043618386947790, guid: 6a817345f02ef469885c0a3a61fdfeb3, type: 2}
@@ -421,10 +419,7 @@ MonoBehaviour:
   - {fileID: 1213235397486632, guid: f4ba104babae447afb484563cd449c0e, type: 2}
   minY: 0
   maxY: 0
-  minX: 0
-  maxX: 0
-  wave: {fileID: 151819451}
-  waveCoordinates: {x: 0, y: 0}
+  wave: {fileID: 151819453}
   upSound: {fileID: 1058139391}
 --- !u!4 &728529926
 Transform:

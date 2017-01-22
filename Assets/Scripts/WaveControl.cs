@@ -11,8 +11,7 @@ public class WaveControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		waveHeight = GetComponent<Transform> ().position.y;
-		print (waveHeight);
+
 	}
 	
 	// Update is called once per frame
@@ -35,31 +34,16 @@ public class WaveControl : MonoBehaviour {
 
 	public void checkCounts(){
 		if(upCount >= 5){
-			RaiseWave ();
+			MoveWaves.TransformWaves(this.transform, .2f,upSound);
 			upCount = 0;
 			downCount = 0;
 		}
 		if (downCount >= 5) {
-			LowerWave ();
+			MoveWaves.TransformWaves(this.transform, -.2f,downSound);
 			upCount = 0;
 			downCount = 0;
 		}
 
 	}
 
-	public void RaiseWave(){
-		//waveHeight += 5;
-		print (waveHeight);
-		waveHeight -= (waveHeight * 0.3f);
-		upSound.Play();
-		transform.position = new Vector2(0, waveHeight);
-	}
-
-	public void LowerWave(){
-		//waveHeight -= 5;
-		print (waveHeight);
-		waveHeight +=  (waveHeight * 0.3f);
-		downSound.Play();
-		transform.position = new Vector2(0, waveHeight);
-	}
 }
