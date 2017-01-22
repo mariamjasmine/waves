@@ -1163,7 +1163,7 @@ Prefab:
       objectReference: {fileID: 728529925}
     - target: {fileID: 11488992, guid: 03ad41995af104d2bb93427f1d9155f5, type: 2}
       propertyPath: Commands.Array.data[2].onCommand.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: killCreature
+      value: increaseCount
       objectReference: {fileID: 0}
     - target: {fileID: 11488992, guid: 03ad41995af104d2bb93427f1d9155f5, type: 2}
       propertyPath: Commands.Array.data[2].onCommand.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
