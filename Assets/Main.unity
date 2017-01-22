@@ -605,6 +605,10 @@ MonoBehaviour:
   - {fileID: 1043618386947790, guid: 6a817345f02ef469885c0a3a61fdfeb3, type: 2}
   - {fileID: 1364770420380918, guid: b4ca61fbcd27a4d94923a43f02d42d00, type: 2}
   - {fileID: 1213235397486632, guid: f4ba104babae447afb484563cd449c0e, type: 2}
+  - {fileID: 1740399191792068, guid: 4f7dfcf085fd84e6481b95f6beebe2f8, type: 2}
+  - {fileID: 1203385598121530, guid: f20616f81343f4cf3984da09c3144ebd, type: 2}
+  - {fileID: 1192148989334040, guid: b1e6396e6938644328f34ce6b381b200, type: 2}
+  - {fileID: 1587688275348966, guid: a1cde2193f5ac44f38f02fb5ff34e7c7, type: 2}
   minY: 0
   maxY: 0
   wave: {fileID: 151819453}
@@ -1341,7 +1345,7 @@ Prefab:
       objectReference: {fileID: 1256029285}
     - target: {fileID: 111590, guid: ea8fa069018224b6792654b8d734afb3, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea8fa069018224b6792654b8d734afb3, type: 2}

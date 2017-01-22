@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114812655663286690}
   m_Layer: 0
   m_Name: Shark
-  m_TagString: Obstacle
+  m_TagString: creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
