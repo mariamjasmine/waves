@@ -30,7 +30,7 @@ public class SpawnObstacle : MonoBehaviour {
 		yield return new WaitForSeconds (waitTime);
 		currentObstacle = obstacleSprites [Random.Range(0, 4)];
 		currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
-		MoveWaves.TransformWaves(wave, .2f,upSound);
+		MoveWaves.TransformWaves(wave, .05f,upSound);
 	}
 
 	public void increaseCount(){

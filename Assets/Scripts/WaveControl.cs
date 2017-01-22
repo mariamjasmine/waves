@@ -34,12 +34,12 @@ public class WaveControl : MonoBehaviour {
 
 	public void checkCounts(){
 		if(upCount >= 5){
-			MoveWaves.TransformWaves(this.transform, .2f,upSound);
+			MoveWaves.TransformWaves(this.transform, -0.1f,upSound);
 			upCount = 0;
 			downCount = 0;
 		}
 		if (downCount >= 5) {
-			MoveWaves.TransformWaves(this.transform, -.2f,downSound);
+			MoveWaves.TransformWaves(this.transform, 0.1f,downSound);
 			upCount = 0;
 			downCount = 0;
 		}
