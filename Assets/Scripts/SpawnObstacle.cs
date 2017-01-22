@@ -28,7 +28,7 @@ public class SpawnObstacle : MonoBehaviour {
 		alive = true;
 		newTime (); 
 		yield return new WaitForSeconds (waitTime);
-		currentObstacle = obstacleSprites [Random.Range(0, 3)];
+		currentObstacle = obstacleSprites [Random.Range(0, 4)];
 		currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
 		MoveWaves.TransformWaves(wave, .2f,upSound);
 	}
