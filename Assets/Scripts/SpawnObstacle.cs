@@ -30,19 +30,20 @@ public class SpawnObstacle : MonoBehaviour {
 		yield return new WaitForSeconds (waitTime);
 		currentObstacle = obstacleSprites [Random.Range(0, 4)];
 		currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
-		MoveWaves.TransformWaves(wave, .06f,upSound);
+		MoveWaves.TransformWaves(wave, -.06f,upSound);
 	}
 
 	public void increaseCount(){
 		count += 1;
 		if(count==3){
+			alive = false;
 			killCreature ();
 		}
 	}
 
 	public void killCreature(){
+			count = 0;
 			Destroy (currentObstacle);
-			alive = false;
 
 	}
 
