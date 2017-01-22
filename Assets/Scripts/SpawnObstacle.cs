@@ -6,7 +6,8 @@ public class SpawnObstacle : MonoBehaviour {
 	public GameObject[] obstacleSprites;
 	private GameObject currentObstacle;
 	public float minY, maxY;
-	private int count;
+	private int enemyCount;
+	private int washCount;
 	private bool alive;
 	private int waitTime;
 	public Transform wave;
@@ -23,8 +24,8 @@ public class SpawnObstacle : MonoBehaviour {
 	void Update ()
 	{
 		
-		print ("count: " + count);
-		if(count==3){
+		print ("count: " + enemyCount);
+		if(enemyCount == 3){
 			alive = false;
 			killCreature ();
 		}
@@ -41,15 +42,15 @@ public class SpawnObstacle : MonoBehaviour {
 		print ("obstacle made");
 	}
 
-	public void increaseCount(){
+	public void increaseEnemyCount(){
 		if (alive == true){
-			count += 1;
+			enemyCount += 1;
 			print ("increasing count");
 		}
 	}
 
 	public void killCreature(){
-			count = 0;
+			enemyCount = 0;
 			Destroy (currentObstacle);
 			twitchClient.GetComponent<TwitchIRC>().SendMsg (killMessage);
 			StartCoroutine ("MakeObstacles");
