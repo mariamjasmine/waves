@@ -31,20 +31,7 @@ public class WaveControl : MonoBehaviour {
 		print (downCount);
 
 	}
-
-	public void commandUP(){
-		upCount += 1;
-		waveHeight = waveHeight - (waveHeight * .05f);
-		transform.position = new Vector2(0, waveHeight);
-		print (waveHeight);
-	}
-
-	public void commandDown(){
-		downCount += 1;
-		waveHeight = waveHeight + (waveHeight * .05f);
-		transform.position = new Vector2(0, waveHeight);
-
-	}
+		
 
 	public void checkCounts(){
 		if(upCount >= 5){
