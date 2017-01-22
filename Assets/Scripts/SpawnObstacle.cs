@@ -17,7 +17,7 @@ public class SpawnObstacle : MonoBehaviour {
 	void Start ()
 	{
 		
-		MakeObstacles ();
+		StartCoroutine ("MakeObstacles");
 		waveCoordinates = wave.GetComponent<Transform>().position;
 		maxWaveDimensions = wave.GetComponent<Renderer> ().bounds.max;
 		minWaveDimensions = wave.GetComponent<Renderer> ().bounds.min;

@@ -28,8 +28,9 @@ public class WaveControl : MonoBehaviour {
 
 	public void commandUp(){
 		upCount += 1;
-		print(downCount);
+		print (downCount);
 
+	}
 
 	public void commandUP(){
 		upCount += 1;
