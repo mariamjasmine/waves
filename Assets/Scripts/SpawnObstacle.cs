@@ -25,12 +25,12 @@ public class SpawnObstacle : MonoBehaviour {
 	{
 		
 		//print ("count: " + enemyCount);
-		if(enemyCount == 3){
+		if(enemyCount == 3 && currentObstacle.tag == "creature"){
 			alive = false;
 			killCreature ();
 		}
 
-		if(washCount == 3){
+		if(washCount == 3 && currentObstacle.tag == "product"){
 			alive = false;
 			washGrammy ();
 		}
@@ -39,7 +39,7 @@ public class SpawnObstacle : MonoBehaviour {
 	IEnumerator MakeObstacles(){
 		newTime (); 
 		yield return new WaitForSeconds (waitTime);
-		currentObstacle = obstacleSprites [Random.Range(0, 4)];
+		currentObstacle = obstacleSprites [Random.Range(0, 8)];
 		currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
 		killMessage = currentObstacle.GetComponent<Obstacle>().chatMessage;
 		MoveWaves.TransformWaves(wave, -.06f,upSound);
@@ -48,14 +48,14 @@ public class SpawnObstacle : MonoBehaviour {
 	}
 
 	public void increaseEnemyCount(){
-		if (alive == true){
+		if (alive == true && currentObstacle.tag == "creature"){
 			enemyCount += 1;
 			print ("increasing enemy count");
 		}
 	}
 
 	public void increaseWashCount(){
-		if (alive == true) {
+		if (alive == true && currentObstacle.tag == "product") {
 			washCount += 1;
 			print ("increasing wash count");
 		}
