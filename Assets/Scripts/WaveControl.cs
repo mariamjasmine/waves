@@ -20,14 +20,14 @@ public class WaveControl : MonoBehaviour {
 
 	public void commandUP(){
 		upCount += 1;
-		waveHeight = waveHeight + (waveHeight * -.03f);
+		waveHeight = waveHeight - (waveHeight * .05f);
 		transform.position = new Vector2(0, waveHeight);
 		print (waveHeight);
 	}
 
 	public void commandDown(){
 		downCount += 1;
-		waveHeight = waveHeight - (waveHeight * .03f);
+		waveHeight = waveHeight + (waveHeight * .05f);
 		transform.position = new Vector2(0, waveHeight);
 	}
 
