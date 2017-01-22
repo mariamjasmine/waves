@@ -24,7 +24,7 @@ public class SpawnObstacle : MonoBehaviour {
 	void Update ()
 	{
 		
-		print ("count: " + enemyCount);
+		//print ("count: " + enemyCount);
 		if(enemyCount == 3){
 			alive = false;
 			killCreature ();

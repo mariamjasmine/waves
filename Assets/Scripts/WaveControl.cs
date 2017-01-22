@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaveControl : MonoBehaviour {
 	private int upCount = 0;
 	private int downCount = 0;
-	private float waveHeight = 5;
+	private float waveHeight = -5;
 	//sound effects from freesfx.com
 	public AudioSource upSound;
 	public AudioSource downSound;
@@ -41,6 +41,7 @@ public class WaveControl : MonoBehaviour {
 			upCount = 0;
 			downCount = 0;
 			waveHeight = this.transform.position.y;
+			//print (waveHeight);
 		}
 		if (downCount >= 5) {
 			MoveWaves.TransformWaves(this.transform, 0.1f,downSound);
@@ -51,7 +52,7 @@ public class WaveControl : MonoBehaviour {
 
 		if(waveHeight > -1.5 || waveHeight < -11){
 			//print (waveHeight);
-			//gameOver = true;
+			gameOver = true;
 		}
 		if (gameOver) {
 			failState ();
