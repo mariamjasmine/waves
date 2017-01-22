@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DestroyCreature : MonoBehaviour {
 	private GameObject currentObstacle;
+	private int count;
 
 
 	// Use this for initialization
 	void Start () {
 		//currentObstacle = GameObject.FindGameObjectWithTag ("Obstacle");
 		//print (currentObstacle);
-	//	killCreature();
 	}
 	
 	// Update is called once per frame
@@ -18,9 +18,16 @@ public class DestroyCreature : MonoBehaviour {
 		currentObstacle = GameObject.FindGameObjectWithTag ("Obstacle");
 	}
 
+	public void increaseCount(){
+		count += 1;
+		if(count==3){
+			killCreature ();
+		}
+	}
+
 	public void killCreature(){
 		if (currentObstacle != null) {
-			currentObstacle.Destroy;
+			//Destroy (currentObstacle);
 			print ("There's something here!");
 		} else {
 			print ("nada");
