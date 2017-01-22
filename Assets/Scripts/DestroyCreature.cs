@@ -27,8 +27,8 @@ public class DestroyCreature : MonoBehaviour {
 
 	public void killCreature(){
 		if (currentObstacle != null) {
-			//Destroy (currentObstacle);
-			print ("There's something here!");
+			Destroy (currentObstacle);
+		//	print ("There's something here!");
 		} else {
 			print ("nada");
 		}
