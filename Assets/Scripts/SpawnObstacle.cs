@@ -17,6 +17,8 @@ public class SpawnObstacle : MonoBehaviour {
 	//public Vector2 waveDimensions;
 	private Vector2 maxWaveDimensions;
 	private Vector2 minWaveDimensions;
+	private float waveHeight;
+	public AudioSource upSound;
 
 	void Start ()
 	{
@@ -24,6 +26,7 @@ public class SpawnObstacle : MonoBehaviour {
 		waveCoordinates = wave.GetComponent<Transform>().position;
 		maxWaveDimensions = wave.GetComponent<Renderer> ().bounds.max;
 		minWaveDimensions = wave.GetComponent<Renderer> ().bounds.min;
+		waveHeight = wave.GetComponent<Transform> ().position.y;
 	}
 
 	void Update ()
@@ -44,7 +47,10 @@ public class SpawnObstacle : MonoBehaviour {
 			print (currentObstacle);
 			
 			currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
-			
+			waveHeight -= (waveHeight * 0.5f);	
+			print (waveHeight);
+			upSound.Play();
+			transform.position = new Vector2(0, waveHeight);
 	}
 
 	public void increaseCount(){

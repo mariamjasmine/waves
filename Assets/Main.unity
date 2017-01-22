@@ -424,6 +424,7 @@ MonoBehaviour:
   maxX: 0
   wave: {fileID: 151819451}
   waveCoordinates: {x: 0, y: 0}
+  upSound: {fileID: 1058139391}
 --- !u!4 &728529926
 Transform:
   m_ObjectHideFlags: 0
