@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4371387637463584}
   - component: {fileID: 212053675901623320}
   - component: {fileID: 61755692042477884}
+  - component: {fileID: 114812655663286690}
   m_Layer: 0
   m_Name: Shark
   m_TagString: Obstacle
@@ -55,6 +56,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.28, y: 2.46}
+--- !u!114 &114812655663286690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043618386947790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8725730d895234f49bf0b8016ee76f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleHealth: 0
+  chatMessage: 
+  obstacleSound: {fileID: 0}
 --- !u!212 &212053675901623320
 SpriteRenderer:
   m_ObjectHideFlags: 1

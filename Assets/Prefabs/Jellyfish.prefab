@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4949569769657412}
   - component: {fileID: 212358212773565512}
   - component: {fileID: 61462452888119178}
+  - component: {fileID: 114861829454522576}
   m_Layer: 0
   m_Name: Jellyfish
   m_TagString: Obstacle
@@ -55,6 +56,20 @@ BoxCollider2D:
   m_Offset: {x: -0.04874924, y: -0.027683131}
   serializedVersion: 2
   m_Size: {x: 2.7242672, y: 2.9879472}
+--- !u!114 &114861829454522576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493182079526882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8725730d895234f49bf0b8016ee76f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleHealth: 0
+  chatMessage: 
+  obstacleSound: {fileID: 0}
 --- !u!212 &212358212773565512
 SpriteRenderer:
   m_ObjectHideFlags: 1
