@@ -45,7 +45,7 @@ public class SpawnObstacle : MonoBehaviour {
 
 		//minY = wavesY, maxY = wavesY + height, minX = wavesX, maxX = wavesX + width
 		GameObject obstacleSprite = obstacleSprites [Random.Range(0, 3)];
-			string obstacleName = obstacleSprite.name;
+		string obstacleName = obstacleSprite.name;
 
 			//GameObject newObstacle = Instantiate(obstacleSprites[i],  new Vector3(-686, 0, 0), transform.rotation);
 

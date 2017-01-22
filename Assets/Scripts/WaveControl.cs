@@ -20,6 +20,7 @@ public class WaveControl : MonoBehaviour {
 		checkCounts ();
 	}
 
+<<<<<<< HEAD
 	public void commandDown(){
 		downCount += 1;
 		print(upCount);
@@ -29,6 +30,19 @@ public class WaveControl : MonoBehaviour {
 		upCount += 1;
 		print(downCount);
 
+=======
+	public void commandUP(){
+		upCount += 1;
+		waveHeight = waveHeight - (waveHeight * .05f);
+		transform.position = new Vector2(0, waveHeight);
+		print (waveHeight);
+	}
+
+	public void commandDown(){
+		downCount += 1;
+		waveHeight = waveHeight + (waveHeight * .05f);
+		transform.position = new Vector2(0, waveHeight);
+>>>>>>> origin/master
 	}
 
 	public void checkCounts(){
