@@ -29,6 +29,11 @@ public class SpawnObstacle : MonoBehaviour {
 			alive = false;
 			killCreature ();
 		}
+
+		if(washCount == 3){
+			alive = false;
+			washGrammy ();
+		}
 	}
 
 	IEnumerator MakeObstacles(){
@@ -45,8 +50,16 @@ public class SpawnObstacle : MonoBehaviour {
 	public void increaseEnemyCount(){
 		if (alive == true){
 			enemyCount += 1;
-			print ("increasing count");
+			print ("increasing enemy count");
 		}
+	}
+
+	public void increaseWashCount(){
+		if (alive == true) {
+			washCount += 1;
+			print ("increasing wash count");
+		}
+
 	}
 
 	public void killCreature(){
@@ -54,6 +67,14 @@ public class SpawnObstacle : MonoBehaviour {
 			Destroy (currentObstacle);
 			twitchClient.GetComponent<TwitchIRC>().SendMsg (killMessage);
 			StartCoroutine ("MakeObstacles");
+	}
+
+	public void washGrammy(){
+			washCount = 0;
+			Destroy (currentObstacle);
+			twitchClient.GetComponent<TwitchIRC>().SendMsg (killMessage);
+			StartCoroutine ("MakeObstacles");
+
 	}
 
 	public void newTime(){
