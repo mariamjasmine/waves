@@ -35,35 +35,35 @@ public class SpawnObstacle : MonoBehaviour {
 	
 	}
 
-	public void MakeObstacles(){
-		minX = waveCoordinates[0];
-		minY = waveCoordinates[1];
-	//	maxX = waveCoordinates[0] + waveDimensions[0];
-	//	maxY = waveCoordinates[1] + waveDimensions[1];
-		print (maxX);
-		print (maxY);
 
-		//minY = wavesY, maxY = wavesY + height, minX = wavesX, maxX = wavesX + width
+	IEnumerator MakeObstacles(){
 		GameObject obstacleSprite = obstacleSprites [Random.Range(0, 3)];
 		string obstacleName = obstacleSprite.name;
-
-			//GameObject newObstacle = Instantiate(obstacleSprites[i],  new Vector3(-686, 0, 0), transform.rotation);
-
 		obstacleSprite = Instantiate(obstacleSprite,new Vector3(Random.Range(0,7),Random.Range(minY,maxY), 0),transform.rotation) as GameObject; 
-
+		if(obstacleSprites != null){
+			print ("theres none");
+		}
 
 	}
 
-	//	bool hasCollisions(GameObject target)
-	//	{
-	//		for (int j = 0; j < hatSprites.Length; j++)
-	//		{
-	//			if (target.GetComponent<BoxCollider>().bounds.Intersects(bound[j]))
-	//			{
-	//				return true;
-	//			}
-	//
-	//		}
-	//		return false;
-	//	}
+//	public void MakeObstacles(){
+//		minX = waveCoordinates[0];
+//		minY = waveCoordinates[1];
+//	//	maxX = waveCoordinates[0] + waveDimensions[0];
+//	//	maxY = waveCoordinates[1] + waveDimensions[1];
+//		print (maxX);
+//		print (maxY);
+//
+//		//minY = wavesY, maxY = wavesY + height, minX = wavesX, maxX = wavesX + width
+//		GameObject obstacleSprite = obstacleSprites [Random.Range(0, 3)];
+//		string obstacleName = obstacleSprite.name;
+//
+//			//GameObject newObstacle = Instantiate(obstacleSprites[i],  new Vector3(-686, 0, 0), transform.rotation);
+//
+//		obstacleSprite = Instantiate(obstacleSprite,new Vector3(Random.Range(0,7),Random.Range(minY,maxY), 0),transform.rotation) as GameObject; 
+//
+//
+//	}
+
+
 }
