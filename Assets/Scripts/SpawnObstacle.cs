@@ -11,10 +11,8 @@ public class SpawnObstacle : MonoBehaviour {
 	private int waitTime;
 	public Transform wave;
 	public AudioSource upSound;
-	[SerializeField]
-	private float killDelay;
-	private float timer = 0;
 	public GameObject twitchClient;
+	private string killMessage;
 
 	void Start ()
 	{
@@ -37,6 +35,7 @@ public class SpawnObstacle : MonoBehaviour {
 		yield return new WaitForSeconds (waitTime);
 		currentObstacle = obstacleSprites [Random.Range(0, 4)];
 		currentObstacle = Instantiate(currentObstacle,new Vector3(Random.Range(-5,7), -3 , 0),transform.rotation) as GameObject; 
+		killMessage = currentObstacle.GetComponent<Obstacle>().chatMessage;
 		MoveWaves.TransformWaves(wave, -.06f,upSound);
 		alive = true;
 		print ("obstacle made");
@@ -52,7 +51,7 @@ public class SpawnObstacle : MonoBehaviour {
 	public void killCreature(){
 			count = 0;
 			Destroy (currentObstacle);
-			twitchClient.GetComponent<TwitchIRC>().SendMsg ("Shoe has left. But she will be back");
+			twitchClient.GetComponent<TwitchIRC>().SendMsg (killMessage);
 			StartCoroutine ("MakeObstacles");
 	}
 

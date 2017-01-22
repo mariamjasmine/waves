@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleHealth: 0
-  chatMessage: 
+  chatMessage: Jellyfish Out
   obstacleSound: {fileID: 0}
 --- !u!212 &212358212773565512
 SpriteRenderer:

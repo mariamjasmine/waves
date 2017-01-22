@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364770420380918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.63, y: -2.82, z: 8.019024}
+  m_LocalPosition: {x: -1.07, y: -2.82, z: 8.019024}
   m_LocalScale: {x: 1.3568057, y: 1.4801317, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleHealth: 0
-  chatMessage: 
+  chatMessage: Shoe out
   obstacleSound: {fileID: 0}
 --- !u!212 &212973888878858240
 SpriteRenderer:
