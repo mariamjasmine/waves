@@ -24,13 +24,7 @@ public class SpawnObstacle : MonoBehaviour {
 
 	void Update ()
 	{
-		if (alive == false) {
-//			timer += Time.deltaTime;
-//			if (timer >= killDelay) {
-				
-//				timer = 0;
-//			}
-		}
+		
 		print ("count: " + count);
 		if(count==3){
 			alive = false;
