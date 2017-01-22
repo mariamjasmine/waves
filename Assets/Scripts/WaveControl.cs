@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveControl : MonoBehaviour {
-	private int upCount;
-	private int downCount;
+	private int upCount = 0;
+	private int downCount = 0;
 	private float waveHeight;
+	public AudioSource upSound;
+	public AudioSource downSound;
 
 	// Use this for initialization
 	void Start () {
@@ -18,25 +20,27 @@ public class WaveControl : MonoBehaviour {
 		checkCounts ();
 	}
 
-	public void commandUP(){
-		upCount += 1;
-		waveHeight = waveHeight + (waveHeight * -.03f);
-		transform.position = new Vector2(0, waveHeight);
-		print (waveHeight);
-	}
-
 	public void commandDown(){
 		downCount += 1;
-		waveHeight = waveHeight - (waveHeight * .03f);
-		transform.position = new Vector2(0, waveHeight);
+		print(upCount);
+	}
+
+	public void commandUp(){
+		upCount += 1;
+		print(downCount);
+
 	}
 
 	public void checkCounts(){
-		if(upCount >= 15){
+		if(upCount >= 5){
 			RaiseWave ();
+			upCount = 0;
+			downCount = 0;
 		}
-		if (downCount >= 15) {
+		if (downCount >= 5) {
 			LowerWave ();
+			upCount = 0;
+			downCount = 0;
 		}
 
 	}
@@ -44,11 +48,16 @@ public class WaveControl : MonoBehaviour {
 	public void RaiseWave(){
 		//waveHeight += 5;
 		print (waveHeight);
-
+		waveHeight -= (waveHeight * 0.3f);
+		upSound.Play();
+		transform.position = new Vector2(0, waveHeight);
 	}
 
 	public void LowerWave(){
 		//waveHeight -= 5;
 		print (waveHeight);
+		waveHeight +=  (waveHeight * 0.3f);
+		downSound.Play();
+		transform.position = new Vector2(0, waveHeight);
 	}
 }
