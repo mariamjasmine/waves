@@ -18,8 +18,9 @@ public class DestroyCreature : MonoBehaviour {
 		currentObstacle = GameObject.FindGameObjectWithTag ("Obstacle");
 	}
 
-	void killCreature(){
+	public void killCreature(){
 		if (currentObstacle != null) {
+			currentObstacle.Destroy;
 			print ("There's something here!");
 		} else {
 			print ("nada");
